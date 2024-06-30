@@ -16,7 +16,7 @@ export default function Root() {
 
   return (
     <div
-      class="w-screen h-screen overflow-auto bg-slate-900 text-white"
+      class="w-screen h-screen overflow-auto bg-slate-950 text-white"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsInBound(true)}
       onMouseLeave={() => setIsInBound(false)}
