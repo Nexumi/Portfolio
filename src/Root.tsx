@@ -1,6 +1,7 @@
 import { Route, Router } from "@solidjs/router";
 import ComingSoonPage from "./pages/ComingSoonPage";
 import { Show, createSignal } from "solid-js";
+import StarrySky from "./components/StarrySky";
 
 export default function Root() {
   const [pos, setPos] = createSignal({ x: 0, y: 0 });
@@ -23,6 +24,7 @@ export default function Root() {
       <Router>
         <Route path="/*" component={ComingSoonPage} />
       </Router>
+      <StarrySky />
       <Show when={isInBound()}>
         <div
           class="fixed size-80 rounded-full bg-gradient-radial from-white via-transparent to-transparent opacity-5 select-none pointer-events-none"
