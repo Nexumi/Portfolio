@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <>
       <div class="h-24 flex justify-between items-center">
-        <img class="h-full" src={TempLogo} draggable={false} />
+        <img class="h-full select-none" src={TempLogo} draggable={false} />
         <div class="m-10">
           <HeaderMenu />
         </div>
