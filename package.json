@@ -19,7 +19,10 @@
     "vite-plugin-solid": "^2.8.2"
   },
   "dependencies": {
+    "@kobalte/core": "^0.13.3",
     "@solidjs/router": "^0.13.6",
-    "solid-js": "^1.8.11"
+    "clsx": "^2.1.1",
+    "solid-js": "^1.8.11",
+    "tailwind-merge": "^2.4.0"
   }
 }
