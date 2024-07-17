@@ -1,3 +1,4 @@
+import { IconMenu2 } from "@tabler/icons-solidjs";
 import TempLogo from "../assets/TempLogo.svg";
 import {
   DropdownMenu,
@@ -25,19 +26,7 @@ function HeaderMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <svg
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
+        <IconMenu2 />
       </DropdownMenuTrigger>
       <DropdownMenuContent class="bg-white p-0">
         <DropdownMenuLabel>Placeholder Menu</DropdownMenuLabel>
