@@ -11,14 +11,12 @@ import {
 
 export default function Header() {
   return (
-    <>
-      <div class="h-24 flex justify-between items-center">
-        <img class="h-full select-none" src={TempLogo} draggable={false} />
-        <div class="m-10">
-          <HeaderMenu />
-        </div>
+    <div class="fixed h-24 w-full flex justify-between items-center">
+      <img class="h-full select-none" src={TempLogo} draggable={false} />
+      <div class="m-10">
+        <HeaderMenu />
       </div>
-    </>
+    </div>
   );
 }
 
