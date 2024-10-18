@@ -11,7 +11,7 @@ import {
 
 export default function Header() {
   return (
-    <div class="fixed h-24 w-full flex justify-between items-center">
+    <div class="fixed h-24 w-[calc(100%-5px)] flex justify-between items-center backdrop-blur-sm">
       <img class="h-full select-none" src={TempLogo} draggable={false} />
       <div class="m-10">
         <HeaderMenu />
