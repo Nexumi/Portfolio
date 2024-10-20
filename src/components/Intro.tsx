@@ -1,47 +1,57 @@
 import { createSignal, For } from "solid-js";
 
 export default function Intro() {
-  const [skills, setSkills] = createSignal([
-    // Programming/Scripting Languages
-    "Python",
-    "Java",
-    "C++",
-    "C",
-    "Go",
-    "SQL",
+  type Skills = {
+    [key: string]: string[];
+  };
 
-    // Web Application
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "SolidJS",
-    "Tailwind CSS",
-
-    // Technological Skills
-    "Linux Server",
-    "REST API",
-    "Docker",
-
-    // Soft Skills
-    "analytical",
-    "flexible",
-    "goal driven",
-    "teamwork",
-    "communication",
-    "meticulous",
-    "positive",
-    "problem solver",
-    "reliable",
-    "organized",
-    "critical thinker",
-  ]);
+  const [skills, setSkills] = createSignal<Skills>({
+    "Programming/Scripting Languages": [
+      "Python",
+      "Java",
+      "C++",
+      "C",
+      "Go",
+      "SQL",
+    ],
+    "Web Application": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "SolidJS",
+      "Tailwind CSS",
+    ],
+    "Technological Skills": ["Linux Server", "REST API", "Docker"],
+    "Soft Skills": [
+      "analytical",
+      "flexible",
+      "goal driven",
+      "teamwork",
+      "communication",
+      "meticulous",
+      "positive",
+      "problem solver",
+      "reliable",
+      "organized",
+      "critical thinker",
+    ],
+  });
 
   return (
     <div class="py-64 space-y-16">
       <div class="text-8xl text-center">Jimmy Pan</div>
-      <div class="flex flex-wrap gap-4 justify-center w-1/2 mx-auto">
-        <For each={skills()}>{(skill) => <Skill name={skill} />}</For>
+      <div class="flex flex-col gap-y-4 w-1/2 mx-auto">
+        <For each={Object.keys(skills())}>
+          {(key) => (
+            <div class="flex flex-wrap gap-4 justify-center items-center">
+              {key}
+              <For each={skills()[key]}>
+                {(skill) => <Skill name={skill} />}
+              </For>
+            </div>
+          )}
+        </For>
       </div>
     </div>
   );
